@@ -1,73 +1,101 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding:0;
-}
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,100;1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200&family=Montserrat:ital,wght@0,200;0,500;1,100;1,300&display=swap')
-body{
+
+body {
     scroll-behavior: smooth;
     transition: all 150ms ease-in;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+
 }
 
 /*welcome*/
 .container{
-    font-size: 1em;
-   position:relative;
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   
+}
+.main-title{
+    padding: 30px;
+    margin-bottom: 40px;
+    background-color: grey;
+    border-radius: 0 0 16px 16px;
+    color: ghostwhite;
+    text-align: center; 
+    margin-top: 0;
 }
 .welcome-page{
 display: flex;
 flex-direction: row;
-flex-basis: 50%;
-margin:40px 0;
-column-gap: 5px;
+gap:20px;
 }
-#title{
-    text-align: center;
-    background-color: grey;
-    padding:35px 0;
-    margin: 30px;
-    border-radius: 15px;
-    font-size: 2.3em;
+.welcome1{
+flex: 1;
+}
+.welcome2{
+    flex: 1;
+}
+#welcome-img{
+   width: 100%;
+   border-radius: 15px;
+}
 
-}
-.title{
-    text-align: center;
-    font-size: 2em;
-    margin: 15px;
-    font-family:fira sans ;
-}
 
 h2{
     text-align: center;
 }
-#melkio{
-    width: 100%;
 
+.welcome-btn{
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
 }
 
-#regina{
-   width: 100%;
+.welcome-btn:hover,
+.welcome-btn:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
 
+.welcome-btn:active { 
+  opacity: .5;
 }
 .button{
-    margin: 40px;
-
+    justify-content: center;
+    align-items: center;
+    margin: 0 45% 0 45%;
 }
-#welcome-button{
-width:40%;
-height:1.5cm;
-justify-content:center;
-margin: 0% 30% 0% 30%;
-padding: 20px;
-text-align: center;
-font-size: 1.2em;
-font-family:Arial, Helvetica, sans-serif;
-color: #555d50;
-background-color:#ffd300;
-border-radius: 19px;
+.footer-bar{
+    padding: 10px;
+    background-color: chartreuse;
+    text-align: center;
 }
-
+@media(max-width:360px){ 
+.main-title{
+    font-size: 1.3em;
+}
+}
 .boundary{
     display:flex;
     flex-direction: column;
@@ -89,34 +117,26 @@ border-radius: 19px;
 
 a{
     text-decoration: none;
+    list-style: none;
 
+}
+a:hover{
+    text-decoration: none;
+    list-style: none;
 }
 
 
 /*main-index1*/
-.container1{
-    font-weight: 300;
-}
-#title1{
-    text-align: center;
-    background-color:#D3D3D3;
-    padding: 15px;
-margin: 0;
-  width:100%;
-    align-content:center ;
-font-size: 3em;
-font-family: fira sans,sans-serif;
-}
+
 
 .navbar{
     display: flex;
     flex-direction: row;
    column-gap: 14px;
-    padding:10px;
+    padding:5px;
     background-color:chartreuse;
     text-align: center;
     font-size: 1.4em;
-    border-radius:20px;
     position: relative;
     justify-content: center;
 
@@ -248,27 +268,31 @@ padding: 0;
 
 
 /*branch-page*/
+.branches{
+   display: grid;
+   grid-template-columns:100/3% 100/3% 100/3% ;
+   grid-template-rows:100%;
+
+    
+}
 .branch1{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    }
-    .joseph{
-grid-row: 1/2;
-    }
-    .teresa{
-grid-row: 2/3;
-    }
-    .alois{
-grid-row: 3/4;
-    }
+    grid-column: 1/2;
+}
 .branch2{
-    display: flex;
-    flex-direction: column; 
+    grid-column: 2/3;
 }
+.branch3{
+    grid-column: 3/4;
 }
-
-
+#branch-img{ 
+    width: 0;
+}
+iframe{
+    min-width: 100%;
+}
+h1{
+    text-align: center;
+}
 
 
 
